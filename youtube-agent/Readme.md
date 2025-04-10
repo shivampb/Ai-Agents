@@ -98,6 +98,8 @@ The video discusses...
 ```
 
 ---
+##Demonstration
+![Terminal Snap](youtube-agent/assets/Screenshot-2025-04-10-124152.png)
 
 ## 🧠 Tech Stack
 
