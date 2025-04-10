@@ -99,7 +99,7 @@ The video discusses...
 
 ---
 ##Demonstration
-![Terminal Snap](youtube-agent/assets/screenshot.png)
+![Terminal Snap](assets/screenshot.png)
 
 ## 🧠 Tech Stack
 
