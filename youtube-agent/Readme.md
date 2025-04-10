@@ -2,7 +2,8 @@
 # 🎥 YouTube Transcript RAG App
 
 This Python project extracts transcripts from YouTube videos, splits the content into chunks,
-embeds them into a vector database, and allows users to ask natural language questions about the video using Google's Gemini LLM.
+embeds them into a vector database, and allows users to ask natural language questions about the video using
+Google's Gemini LLM.
 
 ---
 
