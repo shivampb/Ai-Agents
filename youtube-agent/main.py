@@ -1,11 +1,11 @@
-from langchain.document_loaders import YoutubeLoader
+from langchain_community.document_loaders import YoutubeLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import Chroma
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.vectorstores import Chroma
 from langchain.prompts import PromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
 import os
-
+from dotenv import load_dotenv
 
 class YouTubeTranscriptProcessor:
     """Handles loading and splitting YouTube video transcripts."""
@@ -121,8 +121,10 @@ class RAGApplication:
 
 # --- RUN APP ---
 if __name__ == "__main__":
-    YOUTUBE_URL = "video URL"
-    GOOGLE_API_KEY = "Your_google_AI_API"
+    load_dotenv()  # Load environment variables from .env
+
+    YOUTUBE_URL = os.getenv("YOUTUBE_URL")
+    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
     app = RAGApplication(YOUTUBE_URL, GOOGLE_API_KEY)
     app.setup()
