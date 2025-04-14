@@ -43,7 +43,7 @@ class VectorDatabase:
         except Exception as e:
             raise RuntimeError(f"Error creating vectorstore: {e}")
 
-    def retrieve(self, query, k=3):
+    def retrieve(self, query, k=5):
         return self.vectorstore.similarity_search(query, k=k)
 
 
@@ -116,7 +116,7 @@ class RAGApplication:
             print("🤖 Getting LLM response...\n")
             response = self.responder.answer(retrieved_docs, query)
 
-            print(f"📢 Answer:\n{response}")
+            print(f"📢 Answer:\n{response.content}")
 
 
 # --- RUN APP ---
